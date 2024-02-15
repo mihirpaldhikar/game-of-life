@@ -20,31 +20,4 @@
  * SOFTWARE.
  */
 
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-import { ReactNode } from "react";
-import { Navbar } from "@components/Navbar";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Game Of Life | Mihir Paldhikar",
-  description:
-    "Play with The Game of Life, also known simply as Life, is a cellular automaton. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.",
-};
-
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
-  return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        <Navbar />
-        <main className={"min-h-screen w-full pt-20"}>{children}</main>
-      </body>
-    </html>
-  );
-}
+export { default as GitHub } from "./GitHub";

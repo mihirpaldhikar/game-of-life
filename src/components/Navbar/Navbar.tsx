@@ -20,31 +20,39 @@
  * SOFTWARE.
  */
 
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-import { ReactNode } from "react";
-import { Navbar } from "@components/Navbar";
+import { JSX } from "react";
+import { GitHub } from "@components/Icons";
+import Link from "next/link";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Game Of Life | Mihir Paldhikar",
-  description:
-    "Play with The Game of Life, also known simply as Life, is a cellular automaton. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.",
-};
-
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+export default function Navbar(): JSX.Element {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        <Navbar />
-        <main className={"min-h-screen w-full pt-20"}>{children}</main>
-      </body>
-    </html>
+    <nav
+      className={
+        "fixed w-full border-b border-gray-300 backdrop-blur justify-between bg-white/50 px-5 py-3 h-16 flex items-center md:px-10 md:py-5"
+      }
+    >
+      <div className={"flex items-center space-x-2"}>
+        <h1 className={"font-bold text-xl"}>Game Of Life</h1>
+        <div
+          className={
+            "text-white bg-red-500 rounded-md px-2 flex items-center justify-center py-1"
+          }
+        >
+          <span className={"text-xs"}>Alpha</span>
+        </div>
+      </div>
+      <div>
+        <Link
+          href={"https://github.com/mihirpaldhikar/game-of-life"}
+          target={"_blank"}
+          className={
+            "flex items-center justify-center space-x-2 cursor-pointer border border-black px-2 py-1 rounded-md"
+          }
+        >
+          <GitHub />
+          <span>GitHub</span>
+        </Link>
+      </div>
+    </nav>
   );
 }
