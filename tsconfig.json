@@ -22,8 +22,26 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@type/*": [
+        "./src/type/*"
+      ],
+      "@configs/*": [
+        "./src/configs/*"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@repositories/*": [
+        "./src/repositories/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
       ]
     }
   },
