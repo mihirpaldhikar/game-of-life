@@ -21,12 +21,12 @@
  */
 
 export default function Home() {
-    return (
-        <main className={"min-h-screen flex"}>
-            <div className="m-auto">
-                <h3 className={"font-bold text-3xl"}>Game Of Life</h3>
-                <h4>By Mihir Paldhikar</h4>
-            </div>
-        </main>
-    );
+  return (
+    <main className={"min-h-screen flex"}>
+      <div className="m-auto">
+        <h3 className={"font-bold text-3xl"}>Game Of Life</h3>
+        <h4>By Mihir Paldhikar</h4>
+      </div>
+    </main>
+  );
 }

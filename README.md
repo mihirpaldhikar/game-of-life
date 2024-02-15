@@ -29,4 +29,4 @@ at which this happens is sometimes called a tick.
 Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further
 generations.
 
-*Theory Source: [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)*
+_Theory Source: [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)_

@@ -20,28 +20,27 @@
  * SOFTWARE.
  */
 
-import type {Metadata} from "next";
-import {Montserrat} from "next/font/google";
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
-const montserrat = Montserrat({subsets: ["latin"]});
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Game Of Life | Mihir Paldhikar",
-    description: "Play with The Game of Life, also known simply as Life, is a cellular automaton. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.",
+  title: "Game Of Life | Mihir Paldhikar",
+  description:
+    "Play with The Game of Life, also known simply as Life, is a cellular automaton. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.",
 };
 
 interface RootLayoutProps {
-    children: ReactNode
+  children: ReactNode;
 }
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<RootLayoutProps>) {
-    return (
-        <html lang="en">
-        <body className={montserrat.className}>{children}</body>
-        </html>
-    );
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+  return (
+    <html lang="en">
+      <body className={montserrat.className}>{children}</body>
+    </html>
+  );
 }
