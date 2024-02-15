@@ -20,6 +20,21 @@
  * SOFTWARE.
  */
 
-export { Navbar } from "./Navbar";
-export { GitHub } from "./Icons";
-export { Cell } from "./Cell";
+import { JSX } from "react";
+
+interface CellProps {
+  id: string;
+  isActive: boolean;
+}
+
+export default function Cell({ id, isActive }: CellProps): JSX.Element {
+  return (
+    <div
+      className={"w-[20px] h-[20px]"}
+      style={{
+        backgroundColor: isActive ? "#000" : "transparent",
+        border: "1px solid #a3a3a3",
+      }}
+    ></div>
+  );
+}

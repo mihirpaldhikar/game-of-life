@@ -20,6 +20,4 @@
  * SOFTWARE.
  */
 
-export { Navbar } from "./Navbar";
-export { GitHub } from "./Icons";
-export { Cell } from "./Cell";
+export { default as Cell } from "./Cell";
